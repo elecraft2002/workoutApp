@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-signin-scope" content="profile email">
+    <meta name="google-signin-client_id"
+        content="439876020265-6cp6038tqpktp1ioetnjnstd93qcs8v2.apps.googleusercontent.com">
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/layout.css">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <title>WorkoutApp</title>
+</head>
+
+<body>
+    <nav>
+        <div id="menu"> <span onclick="openNav()" id="icon-menu" class="icon-menu"></span>
+            <h1 id="nadpis">WORKOUT</h1>
+        </div>
+        <div id="mySidenav" class="sidenav">
+            <ul id="seznam">
+                <li> <a id="list" href="">Účet</a></li>
+                <li> <a class="list" href="">Plány</a></li>
+                <li> <a class="list" href="">Nastavení</a></li>
+            </ul>
+        </div>
+    </nav>
+    <figure class="background"> <img src="./img/gym.jpg" alt="Poska" />
+        <div></div>
+    </figure>
+    <div id="content"  onclick="closeNav()"></div>
+    <div class="content">
+        <main>
+            <div>
+                <p>0</p>
+                <p>Workoutů</p>
+            </div>
+            <div>
+                <p>5</p>
+                <p>Minut</p>
+            </div>
+            <p>Cvičte s nejlepší aplikací na cvičení doma.</p>
+        </main>
+        <section class="section">
+            <h2 id="header" class="difficulty">LEHKÉ</h2>
+            <a href="./Bricho_Lehke.html">
+                <div class="plan"> <img src="./img/abs.jpg" alt="6 Pack">
+                    <div class="description">
+                        <h3>BŘICHO</h3>
+                        <p>LEHKÉ</p>
+                        <p class="time">15</p>
+                        <p class="time">minut</p>
+                    </div>
+                </div>
+            </a>
+            <div class="plan"> <img src="./img/chest.jpg" alt="Prsa">
+                <div class="description">
+                    <h3>PRSA</h3>
+                    <p>LEHKÉ</p>
+                    <p class="time">15</p>
+                    <p class="time">minut</p>
+                </div>
+            </div>
+            <div class="plan"> <img src="./img/arms.jpg" alt="Ruce">
+                <div class="description">
+                    <h3>RUCE</h3>
+                    <p>LEHKÉ</p>
+                    <p class="time">15</p>
+                    <p class="time">minut</p>
+                </div>
+            </div>
+        </section>
+        <section class="section">
+            <h2 class="difficulty">POKROČILÉ</h2>
+            <div class="plan"> <img src="./img/abs.jpg" alt="6 Pack">
+                <div class="description">
+                    <h3>BŘICHO</h3>
+                    <p>POKROČILÉ</p>
+                    <p class="time">15</p>
+                    <p class="time">minut</p>
+                </div>
+            </div>
+            <div class="plan"> <img src="./img/chest.jpg" alt="Prsa">
+                <div class="description">
+                    <h3>PRSA</h3>
+                    <p>POKROČILÉ</p>
+                    <p class="time">15</p>
+                    <p class="time">minut</p>
+                </div>
+            </div>
+            <div class="plan"> <img src="./img/arms.jpg" alt="Ruce">
+                <div class="description">
+                    <h3>RUCE</h3>
+                    <p>POKROČILÉ</p>
+                    <p class="time">15</p>
+                    <p class="time">minut</p>
+                </div>
+            </div>
+        </section>
+        <section class="section">
+            <h2 class="difficulty">OBTÍŽNÉ</h2>
+            <div class="plan"> <img src="./img/abs.jpg" alt="6 Pack">
+                <div class="description">
+                    <h3>BŘICHO</h3>
+                    <p>OBTÍŽNÉ</p>
+                    <p class="time">15</p>
+                    <p class="time">minut</p>
+                </div>
+            </div>
+            <div class="plan"> <img src="./img/chest.jpg" alt="Prsa">
+                <div class="description">
+                    <h3>PRSA</h3>
+                    <p>OBTÍŽNÉ</p>
+                    <p class="time">15</p>
+                    <p class="time">minut</p>
+                </div>
+            </div>
+            <div class="plan"> <img src="./img/arms.jpg" alt="Ruce">
+                <div class="description">
+                    <h3>RUCE</h3>
+                    <p>OBTÍŽNÉ</p>
+                    <p class="time">15</p>
+                    <p class="time">minut</p>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>

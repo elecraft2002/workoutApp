@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/training.css">
+    <title>Břicho lehké</title>
+</head>
+
+<body>
+    <div id="uvod">
+        <div class="background">
+            <a href="./index.html"><span class="icon-arrow-left"></span></a>
+            <h1>BŘICHO - LEHKÉ</h1>
+            <div><img src="./img/abs.jpg" alt="6 pack"></div>
+        </div>
+        <div id="info">
+            <p>15 Cviků</p>
+            <p>25 Minut</p>
+        </div>
+        <ul id="contentSectionID"></ul>
+        <ul id="seznam" >
+            <li>
+                <figure>
+                    <div><img src="./img/abs.jpg" alt=""></div>
+                    <figcaption>Sedleh</figcaption>
+                </figure>
+
+            </li>
+            <li>
+                <figure>
+                    <div><img src="./img/abs.jpg" alt=""></div>
+                    <figcaption>Sedleh</figcaption>
+                </figure>
+
+            </li>
+            <li>
+                <figure>
+                    <div><img src="./img/abs.jpg" alt=""></div>
+                    <figcaption>Sedleh</figcaption>
+                </figure>
+
+            </li>
+            <li>
+                <figure>
+                    <div><img src="./img/abs.jpg" alt=""></div>
+                    <figcaption>Sedleh</figcaption>
+                </figure>
+
+            </li>
+            <li>
+                <figure>
+                    <div><img src="./img/abs.jpg" alt=""></div>
+                    <figcaption>Sedleh</figcaption>
+                </figure>
+
+            </li>
+            <li>
+                <figure>
+                    <div><img src="./img/abs.jpg" alt=""></div>
+                    <figcaption>Sedleh</figcaption>
+                </figure>
+
+            </li>
+            <li>
+                <figure>
+                    <div><img src="./img/abs.jpg" alt=""></div>
+                    <figcaption>Sedleh</figcaption>
+                </figure>
+
+            </li>
+        </ul>
+        <footer>
+            <div id="buttonStart" onclick="zacatek()">
+                <p>ZAČÍT</p>
+            </div>
+        </footer>
+    </div>
+    <div id="pripravit">
+        <a href="./index.html"><span class="icon-arrow-left"></span></a>
+        <div class="uvod">
+            <h2>PŘIPRAVTE SE!</h2>
+            <h1 id="uvodCvik">Sedleh</h1>
+        </div>
+        <img src="./img/abs.jpg" alt="6 pack">
+        <div class="odpocet">
+            <div id="loading"></div>
+            <p id="cas">10s</p>
+        </div>
+    </div>
+    <div id="cviceni">
+        <h1 id="cvik">Cvik</h1>
+        <p id="casCviceni">čas</p>
+        <p id="pocet">počet</p>
+        <div id="buttonStart1" onclick="konec()">Klikni mě</div>
+    </div>
+    <div id="pauza">
+        <h2>Pauza</h2>
+        <div class="dalsiCvik">
+            <p>Další cvik</p>
+            <h1 id="dalsiCvik"></h1>
+        </div>
+        <p id="casOdpocinek"></p>
+        <img src="./img/abs.jpg" alt="6 pack">
+    </div>
+    <div id="konec"></div>
+    <script src="./js/training.js"></script>
+</body>
+
+</html>

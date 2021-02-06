@@ -1,0 +1,383 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;900&display=swap');
+
+body {
+    --seda: #eeeeee;
+    --modra: #197bbd5d;
+    --bila: #ffffff;
+    --černá: #2b303a;
+    --červená: #cc444b;
+    font-family: Roboto;
+    background-color: var(--seda);
+}
+
+.menu {
+    display: grid;
+    grid-template-rows: 1em 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+        ". . . .";
+    grid-auto-flow: column;
+}
+
+h1 {
+    z-index: 1;
+    display: inline;
+    top: 0;
+    vertical-align: middle;
+    font-size: 2.5rem;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: var(--bila);
+    transition: .5s;
+    margin: 0;
+}
+
+h2 {
+    font-weight: 500;
+}
+
+h3 {
+    font-weight: 400;
+}
+
+/* Výběr plánů */
+
+section {
+    padding: 0 2em 0 2em;
+}
+
+.description h3 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.description {
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    text-align: left;
+    margin: 0 0 0 1em;
+    align-items: left;
+    left: 0;
+}
+
+.plan {
+    height: 7em;
+    overflow: hidden;
+    border-radius: 1em;
+    position: relative;
+    text-align: center;
+    margin: 1em 0 1em 0;
+    color: var(--bila);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.plan img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+.time {
+    display: inline;
+    padding: 0;
+}
+
+.description p:nth-of-type(2) {
+    color: var(--červená);
+    font-size: 1.5em;
+}
+
+nav #menu {
+    position: fixed;
+    top: 0;
+    display: inline;
+    /*grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+        ". .";*/
+    z-index: 1;
+    padding-right: 100%;
+    height: 5em;
+    width: 100%;
+}
+
+.color {
+    color: var(--černá);
+}
+
+/* The menu */
+.sidenav {
+    height: 100%;
+    /* 100% Full-height */
+    width: 0;
+    /* 0 width - change this with JavaScript */
+    position: fixed;
+    /* Stay in place */
+    z-index: 3;
+    /* Stay on top */
+    top: 0;
+    /* Stay at the top */
+    left: 0;
+    background-color: var(--bila);
+    /* Black*/
+    overflow-x: hidden;
+    /* Disable horizontal scroll */
+    transition: 0.5s;
+    /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* Klikání zavírání sidenav*/
+
+#content {
+    position: fixed;
+    height: 100%;
+    width: 100vh;
+    z-index: 1;
+    display: none;
+    top: 0;
+}
+
+.icon-menu {
+    font-size: 5em;
+    padding: 0;
+    margin: 50% 0 50% 0;
+    background: transparent;
+    top: 0;
+    display: inline;
+    vertical-align: middle;
+    transition: .5s;
+    color: var(--bila);
+}
+
+.sidenav figure {
+    padding: 0;
+    margin: 0;
+}
+
+.sidenav img {
+    width: 16rem;
+}
+
+.sidenav figcaption {
+    z-index: 1;
+    top: 0;
+    font-size: 2.5rem;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: var(--bila);
+    margin: 6rem 0 0 1rem;
+    position: absolute;
+}
+
+.scrolled {
+    color: var(--černá);
+    background-color: var(--bila);
+    transition: .5s;
+}
+
+/* Design ikonek na straně*/
+
+a {
+    text-decoration: none;
+    display: block;
+    color: inherit;
+    transition: .5s;
+}
+
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    color: var(--černá);
+}
+
+
+li {
+    padding: 1rem 0 1rem 0;
+    margin: 0 1rem 0 1rem;
+}
+
+ul li:after {
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    background: var(--černá);
+    transition: width 0.5s ease 0s, left 0.5s ease 0s;
+    width: 0;
+}
+
+ul li:hover:after {
+    width: 100%;
+
+}
+
+/* Základní statistiky */
+
+main {
+    margin: 5rem 2rem 0 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+        ". .";
+    text-align: center;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+main p {
+    grid-column: 1/3;
+    background-color: var(--bila);
+    margin: 0;
+    padding: 1rem 0 1rem 0;
+}
+
+.radius {
+    border-radius: 1em;
+    overflow: hidden;
+}
+
+main div p:first-child {
+    color: var(--červená);
+    font-size: 1.5em;
+    margin: 0;
+}
+
+main div p:nth-child(2) {
+    color: var(--černá);
+    padding: 1rem 0 1rem 0;
+    margin: 0;
+}
+
+/* Úvodní obrázek */
+
+.background {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    margin: 0;
+    top: 0;
+    height: 10em;
+    overflow: hidden;
+}
+
+.background img {
+    width: 100%;
+    filter: blur(2px);
+    filter: grayscale(1);
+    margin: auto;
+}
+
+.background div {
+    background-color: var(--modra);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+}
+
+@media only screen and (min-width: 640px) {
+    .content {
+        padding: 0 5rem 0 5rem;
+    }
+
+    .plan {
+        height: 10em;
+        overflow: hidden;
+        border-radius: 1em;
+        position: relative;
+        text-align: center;
+        margin: 1em 0 1em 0;
+        color: var(--bila);
+    }
+}
+
+@media only screen and (min-width: 920px) {
+    .sidenav {
+        background-color: transparent;
+        height: 5em;
+        overflow: visible;
+        transition: 0s;
+        padding: 0 5rem 0 5rem;
+        display: inline-block;
+        right: 0;
+        left: auto;
+        text-align: left;
+        width: auto;
+    }
+
+    .icon-menu {
+        font-size: 0;
+        transition: 0s;
+    }
+
+    nav {
+        overflow: visible;
+    }
+
+    ul {
+        display: flex;
+        margin: 0;
+        top: 0;
+        font-size: 2rem;
+        color: var(--bila);
+        width: auto;
+    }
+
+    #menu {
+        padding: 0 8rem 0 8rem;
+    }
+
+    li {
+        padding: 0;
+        display: block;
+        margin-top: 1.5rem;
+    }
+
+    ul li:last-child {
+        margin-right: 0;
+        text-align: center;
+        width: auto;
+        height: 100%;
+    }
+
+    ul li:first-child {
+        margin-left: 0;
+    }
+
+    h1 {
+        line-height: 1;
+        display: block;
+        left: 0;
+    }
+
+    .content {
+        padding: 0 8rem 0 8rem;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .content {
+        padding: 0 20rem 0 20rem;
+    }
+
+    #menu {
+        padding: 0 20rem 0 20rem;
+    }
+
+    .plan {
+        height: 15em;
+    }
+
+    .description {
+        margin: 0 0 0 3em;
+    }
+}
