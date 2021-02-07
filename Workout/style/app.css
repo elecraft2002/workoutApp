@@ -1,0 +1,424 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;900&display=swap');
+
+body {
+    --seda: #eeeeee;
+    --modra: #197bbd5d;
+    --bila: #ffffff;
+    --černá: #2b303a;
+    --červená: #cc444b;
+    --šedá: #7b8394;
+    font-family: Roboto;
+    background-color: var(--seda);
+}
+
+.background {
+    width: 100%;
+    position: absolute;
+    overflow: hidden;
+    height: 10rem;
+    z-index: -1;
+    top: 0;
+}
+
+.background div {
+    height: 10rem;
+    display: flex;
+    width: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+h2 {
+    font-weight: 300;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    object-fit: cover;
+}
+
+#pripravit figure{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    overflow: hidden;
+    height: 60vh;
+}
+#pripravit .uvod {
+    top: 0;
+    position: absolute;
+    text-align: center;
+    margin: 0;
+    margin-top: 3.75rem;
+    width: 100%;
+    color: var(--bila);
+}
+
+#pripravit #loading {
+    width: 0%;
+    height: 2rem;
+    background-color: var(--červená);
+    transition: .5s;
+    top: 0;
+    position: absolute;
+}
+.loading.background {
+    background-color: var(--šedá);
+    width: 100%;
+    height: 2rem;
+}
+#pripravit img {
+    min-height: 60vh;
+    height: auto;
+    width: 100%;
+    object-fit: cover;
+    filter: blur(3px) grayscale(.6) brightness(.2);
+}
+
+#pripravit .odpocet {
+    width: 100%;
+    overflow: hidden;
+    position: absolute;
+    top: 60vh;
+    font-size: 3rem;
+    font-weight: 500;
+    color: var(--černá);
+}
+
+#pripravit #cas {
+    margin-top: calc((100vh - (80vh + 2rem)) / 2);
+    margin-bottom: 0;
+}
+
+h1 {
+    font-size: 2.5rem;
+    display: inline;
+    margin: 0;
+    color: var(--bila);
+}
+
+.background h1 {
+    position: absolute;
+}
+
+#info {
+    margin-top: 10rem;
+    border-bottom: solid 2px var(--šedá);
+    height: 2em;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+}
+
+#info p:first-child {
+    margin-left: 3rem;
+}
+
+#info p {
+    display: inline;
+    margin-left: 1rem;
+}
+
+#info p::before {
+    content: '';
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    background-color: var(--červená);
+    margin-right: .3rem;
+}
+
+.icon-arrow-left {
+    position: absolute;
+    color: var(--bila);
+    margin: 1rem;
+    font-size: 3em;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0 3rem 0 3rem;
+    padding: 0;
+    max-height: calc(100vh - 10rem - 34px - 8rem);
+    overflow: hidden;
+    overflow-y: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+ul::-webkit-scrollbar {
+    display: none;
+}
+
+#skip {
+    position: absolute;
+    bottom: 2rem;
+    color: var(--červená);
+    font-weight: 500;
+    font-size: 2rem;
+}
+
+.skip {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#buttonStart {
+    background-color: var(--červená);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10rem;
+    height: 3rem;
+    border-radius: 5rem;
+}
+
+#buttonStart p {
+    padding: 0;
+    margin: 0;
+    color: var(--bila);
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 8rem;
+    border-top: 2px solid var(--šedá);
+    background-color: var(--seda);
+}
+
+li {
+    padding: 1rem 0 1rem 0;
+    border-bottom: 2px solid var(--šedá);
+}
+
+figure {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+}
+
+figure div {
+    height: 5rem;
+    width: 5rem;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    border-radius: .5rem;
+}
+
+figure img {
+    display: flex;
+    width: 150%;
+    justify-content: center;
+    align-items: center;
+}
+
+figcaption {
+    margin: 0 0 0 1rem;
+}
+
+
+#pripravit {
+    display: none;
+}
+
+#cas {
+    display: flex;
+    justify-content: center;
+}
+
+#pauza {
+    display: none;
+}
+
+#cviceni {
+    display: none;
+}
+#cviceni img {
+    display: unset;
+    width: auto;
+    min-height: 40vh;
+    max-height: 60vh;
+    margin: 0 1rem 0 1rem;
+    width: calc(100% - 2rem);
+}
+
+#cviceni figure {
+    margin-top: 5rem;
+    width: 100%;
+    display: block;
+    align-items: center;
+    overflow: hidden;
+}
+
+#cviceni .icon-arrow-left {
+    color: var(--černá);
+    top: 0;
+}
+
+#cviceni h1 {
+    display: block;
+    text-align: center;
+    color: var(--černá);
+}
+
+#cviceni .data {
+    display: flex;
+    justify-content: center;
+}
+
+#buttonStart2 {
+    text-align: center;
+    width: 15rem;
+    background-color: var(--červená);
+    border-radius: 3rem;
+    height: 6rem;
+    margin-left: calc((100vw / 2) - 7.5rem);
+}
+
+#pocet {
+    color: var(--červená);
+    font-size: 3rem;
+    margin: 0;
+}
+
+#pauza h2 {
+    font-weight: 300;
+    color: var(--bila);
+}
+
+.stred p {
+    color: var(--bila);
+}
+
+#casOdpocinek {
+    color: var(--bila);
+}
+#pauza figure {
+    left: 0;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    filter: blur(3px) grayscale(.6) brightness(.2);
+    height: calc(100vh - 12rem);
+    background-color: var(--černá);
+}
+
+#pauza #casOdpocinek {
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.stred {
+    position: absolute;
+    top: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    flex-direction: column;
+}
+
+#pauza img {
+    height: calc(100vh - 12rem);
+    object-fit: cover;
+}
+
+#pauza .dalsiCvik {
+    color: var(--černá);
+    position: absolute;
+    top: 0;
+    margin-top: calc(100vh - 20rem);
+    width: 100%;
+    height: 12rem;
+    background-color: var(--seda);
+    padding-left: 2rem;
+}
+
+.dalsiCvik p {
+    margin: 0;
+}
+
+.dalsiCvik{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#pauza h1 {
+    color: var(--černá);
+}
+
+#casCviceni {
+   color: var(--červená);
+    font-size: 3rem;
+    margin: 1rem 0 0 0;
+    font-weight: 500;
+}
+
+#dalsiOpakovani {
+    color: var(--červená);
+}
+
+#buttonStart2 p {
+    line-height: 6rem;
+    font-weight: 500;
+    font-size: 2.5rem;
+    color: var(--bila);
+}
+
+@media only screen and (min-width: 640px) {
+    ul {
+        margin: 0 5rem 0 5rem;
+    }
+
+    #info p:first-child {
+        margin-left: 5rem;
+    }
+}
+
+@media only screen and (min-width: 920px) {
+    ul {
+        margin: 0 8rem 0 8rem;
+    }
+
+    #info p:first-child {
+        margin-left: 8rem;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    #buttonStart {
+        height: 5rem;
+        width: 15rem;
+    }
+
+    footer {
+        height: 12rem;
+    }
+
+    ul {
+        max-height: calc(100vh - 10rem - 34px - 12rem);
+        margin: 0 20rem 0 20rem;
+    }
+    #info p:first-child {
+        margin-left: 20rem;
+    }
+}
+

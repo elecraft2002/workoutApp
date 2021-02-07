@@ -6,28 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
     <link rel="stylesheet" href="./style/style.css">
-    <link rel="stylesheet" href="./style/training.css">
+    <link rel="stylesheet" href="./style/app.css">
     <title>Břicho lehké</title>
 </head>
 
 <body>
-    <div id="pripravit" style="display: unset;">
-        <a href="./index.html"><span class="icon-arrow-left"></span></a>
+    <div id="pauza" style="display: unset;">
         <figure>
-            <img src="./img/abs.jpg" alt="6 pack">
+            <img id="pauzaUrl" src="./img/abs.jpg" alt="6 pack">
         </figure>
-        <div class="uvod">
-            <h2>PŘIPRAVTE SE!</h2>
-            <h1 id="uvodCvik">Sedleh</h1>
+        <div class="stred">
+            <h2>Pauza</h2>
+            <p id="casOdpocinek">00:10</p>
         </div>
-        <div class="odpocet">
-            <div id="loading"></div>
-            <div class="loading background"></div>
-            <p id="cas">10s</p>
+        <div class="dalsiCvik">
+            <div>
+                <p id="count">Další cvik</p>
+                <h1 id="dalsiCvik">Russian Twist</h1>
+            </div>
+            <p id="dalsiOpakovani">14x</p>
+            <p id="dalsiCas"></p>
         </div>
     </div>
-    <p onclick="loadingBar()">test</p>
-    <script src="./js/training.js"></script>
+    <script src="./js/app.js"></script>
 </body>
 
 </html>
