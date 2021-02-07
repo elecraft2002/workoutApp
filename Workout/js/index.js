@@ -6,13 +6,13 @@ x.addListener(myFunction) // Attach listener function on state changes
 
 /* Set the width of the side navigation to 250px */
 function openNav() {
-  document.getElementById("mySidenav").style.width = "16rem";
+  document.getElementById("mySidenav").classList.add("opened");
   document.getElementById("content").style.display = "block";
 }
 /* Set the width of the side navigation to 0 */
 function closeNav() {
   if (x.matches) {
-    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("mySidenav").classList.remove("opened");
     document.getElementById("content").style.display = "none";
   }
 }
@@ -51,5 +51,6 @@ function myFunction(x) {
   } else {
     console.log("920+");
     seznamTrigger = true;
+    document.getElementById("mySidenav").classList.remove("opened");
   }
 }

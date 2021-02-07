@@ -1,6 +1,6 @@
 //Nastaveni
 let obtiznost = 5;
-const pauza = 5;
+var pauza = 25;
 //Aktuální cviky v pořadí jak jsou za sebou
 let cislo = 0;
 
@@ -13,6 +13,7 @@ const cviky = [
   { name: 'Angličák', pocet: 0, cas: 30, url: "./img/abs.jpg" },
   { name: 'Russian Twist', pocet: 0, cas: 25, url: "./img/abs.jpg" }
 ];
+
 //Vyhledávání v cvikách
 let rozrazeni = cviky.find(({ name }) => name === vyber);
 function vysledek() {
@@ -151,6 +152,7 @@ var casP = "cas";
 
 window.onload = function prepsani() {
   //prepsaniCasu();
+  usporadani();
   run();
   //loadingBar();
 }
@@ -272,5 +274,14 @@ function umisteni() {
   var celkem = kombinace.length;
   document.getElementById("count").innerHTML ="Další " + (cislo + 1) + "/" + celkem; 
 }
-//Zvuky aplikace
-var beep1;
+
+//nastaveni
+function usporadani() {
+  cookiesFormat = document.cookie
+      .split(';')
+      .map(cookie => cookie.split('='))
+      .reduce((accumulator, [key, value]) => ({ ...accumulator, [key.trim()]: decodeURIComponent(value) }), {});
+  console.log(cookiesFormat);
+  pauza = cookiesFormat.pauza;
+  usek = pauza;
+}

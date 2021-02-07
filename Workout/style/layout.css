@@ -132,6 +132,10 @@ nav #menu {
     /* 0.5 second transition effect to slide in the sidenav */
 }
 
+#mySidenav.opened {
+    width: 16rem;
+}
+
 /* Klikání zavírání sidenav*/
 
 #content {
@@ -282,6 +286,47 @@ main div p:nth-child(2) {
     height: 100%;
     position: absolute;
     top: 0;
+}
+
+/* Login */
+.login {
+   position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.521);
+    z-index: 5;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+.login.center {
+    margin-left: calc(50vw - 10rem);
+    width: 20rem;
+    background-color: var(--bila);
+    top: 50px;
+    z-index: 4;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "."
+      ".";
+      height: auto;
+    border-radius: 1rem;
+    }
+
+.login div {
+    margin: 1rem auto 1rem auto;
+}
+
+.blur {
+    filter: blur(5px);
+}
+
+#sekundy {
+    transition: .5s;
 }
 
 @media only screen and (min-width: 640px) {

@@ -4,19 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="google-signin-scope" content="profile email">
-    <meta name="google-signin-client_id"
-        content="439876020265-6cp6038tqpktp1ioetnjnstd93qcs8v2.apps.googleusercontent.com">
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
     <link rel="stylesheet" href="./style/style.css">
     <link rel="stylesheet" href="./style/layout.css">
     <link rel="stylesheet" href="./style/remove.css">
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
     <script src="https://apis.google.com/js/platform.js" async defer></script>
     <title>WorkoutApp</title>
 </head>
 
 <body>
-    <nav>
+    <nav id="navigace">
         <div id="menu"> <span onclick="openNav()" id="icon-menu" class="icon-menu"></span>
             <h1 id="nadpis">WORKOUT</h1>
         </div>
@@ -25,14 +23,15 @@
                 <li> <a id="list" href="">Účet</a></li>
                 <li> <a class="list" href="">Plány</a></li>
                 <li> <a class="list" href="">Nastavení</a></li>
+                <li> <a class="list" href="">O Nás</a></li>
             </ul>
         </div>
     </nav>
-    <figure class="background"> <img src="./img/gym.jpg" alt="Poska" />
+    <figure class="background" id="backgroundBlur"> <img src="./img/gym.jpg" alt="Poska" />
         <div></div>
     </figure>
     <div id="content" onclick="closeNav()"></div>
-    <div class="content">
+    <div class="content" id="contentBlur">
         <main>
             <div>
                 <p>0</p>
@@ -128,7 +127,25 @@
             </div>
         </section>
     </div>
+    <div class="login" id="login">
+        <div class="login center">
+            <div class="personal">
+                <p>Jméno</p>
+                <input type="text" name="name" placeholder="Vojtěch..." id="jmeno">
+                <p>Příjmení</p>
+                <input type="text" name="surname" placeholder="Suchánek..." id="prijmeni">
+            </div>
+            <div class="settings">
+                <p id="sekundy">Pauza mezi cviky (sekundy)</p>
+                <input type="text" name="pauza" placeholder="25 (celá čísla)" id="pauza">
+            </div>
+            <div class="sbmit">
+                <input type="button" value="HOTOVO" onclick="asign()">
+            </div>
+        </div>
+    </div>
     <script src="./js/index.js"></script>
+    <script src="./js/settings.js"></script>
 </body>
 
 </html>
